@@ -1,4 +1,3 @@
 name: Chris Judkins
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-permalink: /404.html
