@@ -2,10 +2,14 @@
 layout: default
 title: Chris' Blog
 ---
-  <h1>{{ page.title }}</h1>
-    <ul class="posts">
-
-      {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> <span class="glyphicon glyphicon-arrow-right"></span> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+<h1>{{ page.title }}</h1>
+  <div class="list-group">
+    {% for post in site.posts %}
+      <a href="{{ post.url }}" title="{{ post.title }}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{ post.title }}</h5>
+          <p class="mb-1">{{ post.date | date_to_string }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
